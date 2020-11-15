@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA917E48-0B6C-4043-B629-B5655C35CD75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMverEntity</RootNamespace>
+    <AssemblyName>DMverEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v20.1" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1" />
+    <Reference Include="DevExpress.Data.v20.1" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addAccount.Designer.cs">
+      <DependentUpon>addAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addEW.Designer.cs">
+      <DependentUpon>addEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addInvoice.Designer.cs">
+      <DependentUpon>addInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRoom.Designer.cs">
+      <DependentUpon>addRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addService.Designer.cs">
+      <DependentUpon>addService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addStaff.Designer.cs">
+      <DependentUpon>addStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTenancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTenancy.Designer.cs">
+      <DependentUpon>addTenancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editAccount.Designer.cs">
+      <DependentUpon>editAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editCustomer.Designer.cs">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editEW.Designer.cs">
+      <DependentUpon>editEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editRoom.Designer.cs">
+      <DependentUpon>editRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editService.Designer.cs">
+      <DependentUpon>editService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editStaff.Designer.cs">
+      <DependentUpon>editStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editTenancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editTenancy.Designer.cs">
+      <DependentUpon>editTenancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\CHITIETHOADON.cs" />
+    <Compile Include="Entity\CHITIETHOPDONG.cs" />
+    <Compile Include="Entity\connectDBEntity.cs" />
+    <Compile Include="Entity\DICHVU.cs" />
+    <Compile Include="Entity\DIENNUOC.cs" />
+    <Compile Include="Entity\HOADON.cs" />
+    <Compile Include="Entity\HOPDONG.cs" />
+    <Compile Include="Entity\KHACHHANG.cs" />
+    <Compile Include="Entity\NHANVIEN.cs" />
+    <Compile Include="Entity\PHONGTRO.cs" />
+    <Compile Include="Entity\sysdiagrams.cs" />
+    <Compile Include="Entity\TAIKHOAN.cs" />
+    <Compile Include="Entity\TRANGTHAIPHONG.cs" />
+    <Compile Include="frmForgot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgot.Designer.cs">
+      <DependentUpon>frmForgot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportCustomer.Designer.cs">
+      <DependentUpon>reportCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportInvoice.Designer.cs">
+      <DependentUpon>reportInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportService.Designer.cs">
+      <DependentUpon>reportService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportStaff.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportStaff.Designer.cs">
+      <DependentUpon>reportStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report_EW.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report_EW.Designer.cs">
+      <DependentUpon>report_EW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Account.Designer.cs">
+      <DependentUpon>UC_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Customer.Designer.cs">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Electricwater.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Electricwater.Designer.cs">
+      <DependentUpon>UC_Electricwater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_History.Designer.cs">
+      <DependentUpon>UC_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Invoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Invoice.Designer.cs">
+      <DependentUpon>UC_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Roominfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Roominfo.Designer.cs">
+      <DependentUpon>UC_Roominfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Salary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Salary.Designer.cs">
+      <DependentUpon>UC_Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Service.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Service.Designer.cs">
+      <DependentUpon>UC_Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Staff.Designer.cs">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Tenancy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Tenancy.Designer.cs">
+      <DependentUpon>UC_Tenancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportTenancy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportTenancy.Designer.cs">
+      <DependentUpon>reportTenancy.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addAccount.resx">
+      <DependentUpon>addAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addEW.resx">
+      <DependentUpon>addEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addInvoice.resx">
+      <DependentUpon>addInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRoom.resx">
+      <DependentUpon>addRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addService.resx">
+      <DependentUpon>addService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addStaff.resx">
+      <DependentUpon>addStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTenancy.resx">
+      <DependentUpon>addTenancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editAccount.resx">
+      <DependentUpon>editAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editCustomer.resx">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editEW.resx">
+      <DependentUpon>editEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editRoom.resx">
+      <DependentUpon>editRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editService.resx">
+      <DependentUpon>editService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editStaff.resx">
+      <DependentUpon>editStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editTenancy.resx">
+      <DependentUpon>editTenancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgot.resx">
+      <DependentUpon>frmForgot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="reportCustomer.resx">
+      <DependentUpon>reportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportInvoice.resx">
+      <DependentUpon>reportInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportService.resx">
+      <DependentUpon>reportService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportStaff.resx">
+      <DependentUpon>reportStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_EW.resx">
+      <DependentUpon>report_EW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Account.resx">
+      <DependentUpon>UC_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Customer.resx">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Electricwater.resx">
+      <DependentUpon>UC_Electricwater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_History.resx">
+      <DependentUpon>UC_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Invoice.resx">
+      <DependentUpon>UC_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Roominfo.resx">
+      <DependentUpon>UC_Roominfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Salary.resx">
+      <DependentUpon>UC_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Service.resx">
+      <DependentUpon>UC_Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Tenancy.resx">
+      <DependentUpon>UC_Tenancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportTenancy.resx">
+      <DependentUpon>reportTenancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Appdata\QLPT.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Appdata\QLPT_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>QLPT.mdf</DependentUpon>
+    </Content>
+    <Content Include="images\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
