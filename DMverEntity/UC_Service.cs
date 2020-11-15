@@ -88,9 +88,10 @@ namespace DMverEntity
         private void bbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            int id = int.Parse(txtServiceID.Text);
+            
             if (txtServiceID.Text != "")
             {
+                int id = int.Parse(txtServiceID.Text);
                 if (MessageBox.Show("Bạn muốn xoá dịch vụ này ?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     var Service = mod.DICHVU.FirstOrDefault(p => p.MaDichVu == id);

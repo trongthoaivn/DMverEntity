@@ -59,7 +59,6 @@ namespace DMverEntity
             pHONGTRO.SoNguoiO = int.Parse(txtCapacity.Text);
             pHONGTRO.MoTa = txtDescription.Text;
             var TY = mod.HOPDONG.FirstOrDefault(a => a.MaPhong ==txtRoomID.Text);
-
             var CT = mod.CHITIETHOPDONG.FirstOrDefault(a => a.MaHopDong == TY.MaHopDong);
             CT.TenPhong = txtRoomName.Text;
             mod.SaveChanges();
